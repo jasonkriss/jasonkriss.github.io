@@ -1,33 +1,133 @@
 <html>
   <head>
-    <meta name="viewport" content="initial-scale=1">
-    <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="styles/main.css">
     <title>Jason Kriss</title>
+    <style>
+      body {
+        font-family: Courier, monospace;
+        color: #4e4e4e;
+        display: flex;
+        justify-content: center;
+      }
+
+      .name {
+        font-size: 2.5rem;
+      }
+
+      .title {
+        font-size: 1.15rem;
+      }
+
+      .item {
+        margin-bottom: 1.25rem;
+      }
+
+      .container {
+        text-align: center;
+        margin-top: 10%;
+        max-width: 480px;
+      }
+
+      .bio {
+        line-height: 1.25rem;
+        font-size: .85rem;
+      }
+
+      .cta {
+        font-size: 1.5rem;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+      }
+
+      .links,
+      .clients {
+        position: absolute;
+        bottom: 1rem;
+      }
+
+      .links {
+        left: 1rem;
+      }
+
+      .clients {
+        right: 1rem;
+      }
+
+      .clients img {
+        position: relative;
+      }
+
+      .goat,
+      .sfox {
+        height: 42px;
+        top: 16px;
+      }
+
+      .dsc,
+      .peerstreet {
+        height: 28px;
+        top: 9px;
+      }
+
+      .links li,
+      .clients li {
+        display: inline;
+      }
+
+      .links li:not(:last-child):after {
+        content: '|';
+        margin-left: .5rem;
+      }
+
+      @media (max-width: 480px) {
+        .links {
+          left: initial;
+        }
+        
+        .clients {
+          right: initial;
+          bottom: 3rem;          
+        }
+      }
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <div id="content">
-      <h1>Jason Kriss</h1>
-      <p>Code. Data. Learning.<br><br>Need some help? <a href="mailto:jasonkriss@gmail.com">Email me.</a></p>
-      <div id="icons">
-        <a href="https://twitter.com/jasonkriss" class="icon ion-social-twitter" title="Twitter"></a>
-        <a href="https://github.com/jasonkriss" class="icon ion-social-github" title="GitHub"></a>
-        <a href="https://news.ycombinator.com/user?id=JasonKriss" class="icon ion-social-hackernews" title="Hacker News"></a>
-        <a href="https://www.facebook.com/jason.kriss.7" class="icon ion-social-facebook" title="Facebook"></a>
-        <a href="https://instagram.com/jasonkriss" class="icon ion-social-instagram" title="Instagram"></a>
-        <a href="https://linkedin.com/in/jasonkriss" class="icon ion-social-linkedin" title="LinkedIn"></a>
+    <div class="container">
+      <div class="name item">Jason Kriss</div>
+      <div class="title item">Deep Learning & Machine Learning Consultant</div>
+      <div class="bio item">Undergrad at Minnesota (under Patrick Bajari). Grad school at The Courant Institute (NYU). Worked on Wall Street. Founded some startups. Love math. Love data. Love code.</div>
+      <div class="logo item">
+        <img src="logo.svg" alt=""/>
+      </div>
+      <div class="cta item">
+        <a href="mailto:jasonkriss@gmail.com">Get in touch</a>
       </div>
     </div>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-45160504-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+    <ul class="links">
+      <li><a href="https://linkedin.com/in/jasonkriss">LinkedIn</a></li>
+      <li><a href="https://angel.co/jasonkriss">AngelList</a></li>
+    </ul>
+    <div class="clients">
+      <span>Recent Clients:</span>
+      <ul class="client-list">
+        <li><a href="https://www.goat.com" title="GOAT"><img class="goat" src="goat.jpg" alt="GOAT"></a></li>
+        <li><a href="https://www.dollarshaveclub.com" title="Dollar Shave Club"><img class="dsc" src="dsc.png" alt="Dollar Shave Club"></a></li>
+        <li><a href="https://www.sfox.com" title="SFOX"><img class="sfox" src="sfox.png" alt="SFOX"></a></li>
+        <li><a href="https://www.peerstreet.com/" title="PeerStreet"><img class="peerstreet" src="peerstreet.png" alt="PeerStreet"></a></li>
+      </ul>
+    </div>
   </body>
 </html>
